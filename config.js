@@ -89,4 +89,4 @@ config.items = {
   },
 };
 
-module.exports = config;
+export default config;
