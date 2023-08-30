@@ -1,0 +1,30 @@
+.swiper-slide {
+    
+    font-size: 1rem;
+    /* background: magenta; */
+    margin-bottom: 3rem;
+    /* margin-left: 1rem; */
+    
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: space-around;
+    column-gap: 2rem;
+    align-items: center;
+}
+
+
+
+
+.swiper-pagination-bullet{
+    background-color: #ffffff !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #E10174 !important;
+}
+
+
+.footer{
+    margin-top: auto;
+}

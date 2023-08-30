@@ -1,0 +1,69 @@
+{
+  "teams":[
+    {
+      "id":1,
+      "fullname": "Ranjan, Vikas" ,
+      "email":"Vikas.Ranjan@T-Mobile.com",
+      "role": "Sr Manager, Software Development",
+      "bio":"Passionate about crafting elegant and efficient software solutions, I am a dedicated software engineer with a knack for tackling complex challenges. With a solid foundation in computer science and years of hands-on experience, I thrive on turning innovative ideas into functional, user-friendly applications.",
+      "image": "../../src/assets/teamavartars/boy.png"
+    },
+    {
+      "id":2,
+      "fullname": "Li, Tom" ,
+      "email":"zhijian.li@t-mobile.com",
+      "role": "Principal Engineer, Software",
+      "bio":"Passionate about crafting elegant and efficient software solutions, I am a dedicated software engineer with a knack for tackling complex challenges. With a solid foundation in computer science and years of hands-on experience, I thrive on turning innovative ideas into functional, user-friendly applications.",
+      "image:":"../../src/assets/teamavartars/boy.png"
+    },
+     {
+      "id":3,
+      "fullname": "Chandra, Sonali" ,
+      "email":"sonali.chandra44@t-mobile.com",
+      "role": "Assoc Engineer, Software",
+      "bio":"Passionate about crafting elegant and efficient software solutions, I am a dedicated software engineer with a knack for tackling complex challenges. With a solid foundation in computer science and years of hands-on experience, I thrive on turning innovative ideas into functional, user-friendly applications.",
+      "image":"../../src/assets/teamavartars/boy.png"
+    },
+     {
+      "id":4,
+      "fullname": "Husting, Darren" ,
+      "email":"darren.husting1@t-mobile.com",
+      "role": "Engineer, Software",
+      "bio":"Passionate about crafting elegant and efficient software solutions, I am a dedicated software engineer with a knack for tackling complex challenges. With a solid foundation in computer science and years of hands-on experience, I thrive on turning innovative ideas into functional, user-friendly applications.",      
+      "image:":"../../src/assets/teamavartars/boy.png"
+    },
+     {
+      "id":5,
+      "fullname": "Wu, Raymond" ,
+      "email":"raymond.wu@t-mobile.com",
+      "role": "Principal Engineer, Software",
+      "bio":"Passionate about crafting elegant and efficient software solutions, I am a dedicated software engineer with a knack for tackling complex challenges. With a solid foundation in computer science and years of hands-on experience, I thrive on turning innovative ideas into functional, user-friendly applications.",      
+      "image":"../../src/assets/teamavartars/boy.png"
+    },   
+     {
+      "id":6,
+      "fullname": "Bethamsetty, Sridhar" ,
+      "email":"sridhar.bethamsetty@t-mobile.com",
+      "role": "Principal Engineer, Software",
+      "bio":"Passionate about crafting elegant and efficient software solutions, I am a dedicated software engineer with a knack for tackling complex challenges. With a solid foundation in computer science and years of hands-on experience, I thrive on turning innovative ideas into functional, user-friendly applications.",      
+      "image":"../../src/assets/teamavartars/boy.png"
+    },   
+    {
+      "id":7,
+      "fullname": "Selvaraj, Shalini" ,
+      "email":"shalini.selvaraj6@t-mobile.com",
+      "role": "Sr Engineer, Software",
+      "bio":"Passionate about crafting elegant and efficient software solutions, I am a dedicated software engineer with a knack for tackling complex challenges. With a solid foundation in computer science and years of hands-on experience, I thrive on turning innovative ideas into functional, user-friendly applications.",      
+      "image":"../../src/assets/teamavartars/boy.png"
+    },   
+    {
+      "id":8,
+      "fullname": "Bahuleyan, Manjith" ,
+      "email":"manjith.bahuleyan1@t-mobile.com",
+      "role": "Sr Engineer, Software",
+      "bio":"Passionate about crafting elegant and efficient software solutions, I am a dedicated software engineer with a knack for tackling complex challenges. With a solid foundation in computer science and years of hands-on experience, I thrive on turning innovative ideas into functional, user-friendly applications.",      
+      "image":"../../src/assets/teamavartars/boy.png"
+    }
+  ]
+}
+
