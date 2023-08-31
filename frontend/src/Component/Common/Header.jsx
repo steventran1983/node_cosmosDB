@@ -19,7 +19,7 @@ import TmobileLogo from "../../assets/images/tmobile_logo.png";
 import { Avatar } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-const pages = ["home", "team", "platforms", "products", "achievements"];
+const pages = ["home", "products", "achievements"];
 
 const magetanColor = "#E10174";
 
