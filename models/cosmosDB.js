@@ -1,10 +1,10 @@
 import { CosmosClient } from "@azure/cosmos";
 import config from "../config.js";
+import * as dotenv from "dotenv";
+dotenv.config();
 
-const endpoint = config.endpoint;
-const key = config.key;
-const databaseId = config.database.id;
-const containerId = config.container.id;
+const endpoint = process.env.COSMOSDB_ENDPOINT;
+const key = process.env.COSMOSDB_KEY;
 const partitionKey = { kind: "Hash", paths: ["/partitionKey"] };
 
 const options = {

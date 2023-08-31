@@ -1,9 +1,11 @@
+import * as dotenv from "dotenv";
+dotenv.config();
 import client from "../models/cosmosDB.js";
 import config from "../config.js ";
 
 export const getEmployees = async (req, res) => {
-  const databaseId = config.database.id;
-  const containerId = "employees";
+  const databaseId = process.env.COSMOSDB_DATABASE;
+  const containerId = process.env.COSMOSDB_CONTAINER_EMPLOYEES;
   try {
     const { resources: items } = await client
       .database(databaseId)
