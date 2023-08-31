@@ -146,7 +146,7 @@ const Hero = () => {
               fontWeight: "bold",
             }}
           >
-            Data Intelligent
+            Data Intelligence
           </Typography>
           <Typography
             variant="h2"

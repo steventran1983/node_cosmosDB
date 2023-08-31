@@ -19,14 +19,6 @@ import { Box, Container } from "@mui/material";
 import AOS from "aos";
 import "aos/dist/aos.css";
 const Home = () => {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getInfo());
-  }, []);
-
-  const home = useSelector(homeSelector);
-  // const { infos, status } = home;
-
   return (
     useEffect(() => {
       AOS.init({

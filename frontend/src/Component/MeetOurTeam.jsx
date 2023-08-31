@@ -22,6 +22,11 @@ import CloudIcon from "@mui/icons-material/Cloud";
 import { useState, useEffect } from "react";
 import Modal from "@mui/material/Modal";
 import Photo from "../../src/assets/teamavartars/man.png";
+import { homeSelector } from "../Redux/selector";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { getInfo } from "./Pages/Home/homeSlice";
+
 const style = {
   position: "absolute",
   top: "50%",
@@ -44,10 +49,20 @@ const flexStyle = {
 
 const MeetOurTeam = () => {
   const [modal, setModal] = useState(false);
+  const [teamContact, setTeamContact] = useState({});
+  const handleOnclick = (index) => {
+    setModal(true);
+    setTeamContact(teamMembers[index]);
+  };
   const handleClose = () => {
     setModal(false);
   };
-
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getInfo());
+  }, []);
+  const home = useSelector(homeSelector);
+  const { teamMembers } = home.infos;
   return (
     <Container
       maxWidth="xl"
@@ -82,8 +97,17 @@ const MeetOurTeam = () => {
             columnGap: "2rem",
           }}
         >
-          {teamContact.map((item) => {
-            const { id, name, role, email, phone, image } = item;
+          {teamMembers.map((item, index) => {
+            const {
+              id,
+              firstname,
+              lastname,
+              bio,
+              role,
+              image,
+              contact,
+              project,
+            } = item;
             return (
               <Card
                 key={id}
@@ -94,6 +118,7 @@ const MeetOurTeam = () => {
                 }}
               >
                 <CardActionArea
+                  onClick={() => handleOnclick(index)}
                   sx={{
                     color: theme.palette.primary.main,
                   }}
@@ -108,7 +133,7 @@ const MeetOurTeam = () => {
                       }}
                     >
                       <Avatar
-                        src={Photo}
+                        src={image}
                         sx={{
                           width: 100,
                           height: 100,
@@ -122,7 +147,7 @@ const MeetOurTeam = () => {
                       color="primary"
                       sx={{ marginTop: "0.5rem" }}
                     >
-                      {name}
+                      {firstname} {lastname}
                     </Typography>
                     <Typography variant="body1" color="text.secondary">
                       {role}
@@ -144,7 +169,7 @@ const MeetOurTeam = () => {
                 </CardActionArea>
                 <CardActions>
                   <Button
-                    onClick={() => setModal(true)}
+                    onClick={() => handleOnclick(index)}
                     onClose={() => setModal(false)}
                     variant="contained"
                     size="small"
@@ -173,15 +198,15 @@ const MeetOurTeam = () => {
               ...style,
               width: 800,
               display: "flex",
-              justifyContent: "cente",
+              justifyContent: "center",
               alignItems: "center",
               columnGap: "2rem",
             }}
           >
             <Box>
               <img
-                src={Photo}
-                alt={teamContact[1].image}
+                src={teamContact.image}
+                alt={teamContact.firstname}
                 width={200}
                 height={200}
                 style={{
@@ -199,65 +224,39 @@ const MeetOurTeam = () => {
                   color: theme.palette.primary.main,
                 }}
               >
-                {teamContact[1].name}
+                {teamContact.firstname} {teamContact.lastname}
               </Typography>
               <Typography pb="1rem" align="center">
-                {teamContact[1].role}
+                {teamContact.role}
               </Typography>
-              <Typography pb="1rem">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-                corporis harum recusandae dolor in obcaecati, vero quam tempore
-                natus amet earum consequuntur maiores libero porro rerum, illo
-                nostrum iure veritatis?
+              <Typography align="left" pb="1rem">
+                {teamContact.bio}
               </Typography>
-              <Typography variant="h6">Works on:</Typography>
+              <Typography align="left" variant="h6">
+                Works on:
+              </Typography>
               <Box
                 sx={{
                   paddingLeft: "2rem",
                 }}
               >
-                <Box
-                  sx={{
-                    ...flexStyle,
-                    columnGap: "1rem",
-                    color: `${theme.palette.primary.main}`,
-                  }}
-                >
-                  <CloudIcon />
-                  <Typography>Location Session Record</Typography>
-                </Box>
-                <Box
-                  sx={{
-                    ...flexStyle,
-                    columnGap: "1rem",
-                    color: `${theme.palette.primary.main}`,
-                  }}
-                >
-                  <CloudIcon />
-                  <Typography>Location Session Record</Typography>
-                </Box>
-                <Box
-                  sx={{
-                    ...flexStyle,
-                    columnGap: "1rem",
-                    color: `${theme.palette.primary.main}`,
-                  }}
-                >
-                  <CloudIcon />
-                  <Typography>Location Session Record</Typography>
-                </Box>
-                <Box
-                  sx={{
-                    ...flexStyle,
-                    columnGap: "1rem",
-                    color: `${theme.palette.primary.main}`,
-                  }}
-                >
-                  <CloudIcon />
-                  <Typography>Location Session Record</Typography>
-                </Box>
+                {teamContact.project
+                  ? teamContact.project.map((item, index) => (
+                      <Box
+                        key={index}
+                        sx={{
+                          ...flexStyle,
+                          columnGap: "1rem",
+                          color: `${theme.palette.primary.main}`,
+                        }}
+                      >
+                        <CloudIcon />
+                        <Typography>{item}</Typography>
+                      </Box>
+                    ))
+                  : ""}
               </Box>
-              <Typography pt="1rem" variant="h6">
+              <Typography align="left" pt="1rem" variant="h6">
                 Contact:
               </Typography>
               <Box
@@ -273,18 +272,37 @@ const MeetOurTeam = () => {
                   }}
                 >
                   <EmailIcon />
-                  <Typography>{teamContact[1].email}</Typography>
+                  {teamContact.project ? (
+                    <Typography>
+                      <a
+                        style={{
+                          color: `${theme.palette.primary.main}`,
+                          textDecoration: "none",
+                        }}
+                        href={`mailto:${teamContact.contact.email}`}
+                        target="_top"
+                      >
+                        {teamContact.contact.email}
+                      </a>
+                    </Typography>
+                  ) : (
+                    ""
+                  )}
                 </Box>
-                <Box
-                  sx={{
-                    ...flexStyle,
-                    columnGap: "1rem",
-                    color: `${theme.palette.primary.main}`,
-                  }}
-                >
-                  <LinkedInIcon />
-                  <Typography>Location Session Record</Typography>
-                </Box>
+                {teamContact.project && teamContact.contact.linkedin !== "" ? (
+                  <Box
+                    sx={{
+                      ...flexStyle,
+                      columnGap: "1rem",
+                      color: `${theme.palette.primary.main}`,
+                    }}
+                  >
+                    <LinkedInIcon />
+                    <Typography>{teamContact.contact.linkedin}</Typography>
+                  </Box>
+                ) : (
+                  ""
+                )}
               </Box>
             </Box>
           </Box>
