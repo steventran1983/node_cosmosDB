@@ -6,6 +6,7 @@ const getEmployees = async (req, res) => {
   const databaseId = process.env.COSMOSDB_DATABASE;
   const containerId = process.env.COSMOSDB_CONTAINER_EMPLOYEES;
   console.log(databaseId, containerId);
+  res.json({ message: databaseId, containerId: containerId });
   // try {
   //   const { resources: items } = await client
   //     .database(databaseId)
