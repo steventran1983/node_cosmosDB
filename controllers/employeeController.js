@@ -17,4 +17,4 @@ const getEmployees = async (req, res) => {
   }
 };
 
-exports.getEmployees = getEmployees;
+module.exports = getEmployees;
