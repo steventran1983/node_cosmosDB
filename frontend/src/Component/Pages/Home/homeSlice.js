@@ -31,7 +31,7 @@ const homeSlice = createSlice({
 
 export const getInfo = createAsyncThunk("home/getInfo", async () => {
   try {
-    const response = await axios.get(`${api}/employee/all`);
+    const response = await axios.get(`${api}/employees/all`);
     return response.data;
   } catch (e) {
     return e.response;

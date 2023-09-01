@@ -269,4 +269,4 @@ export const testimonials = [
   },
 ];
 
-export const api = "http://localhost:4000/api";
+export const api = "https://dii-portfolio-deploy.azurewebsites.net/api";
