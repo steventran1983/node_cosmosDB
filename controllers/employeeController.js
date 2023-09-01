@@ -1,6 +1,6 @@
 const dotenv = require("dotenv");
 dotenv.config();
-const client = require("../models/cosmosDB");
+// const client = require("../models/cosmosDB");
 
 const getEmployees = async (req, res) => {
   res.json({ message: "This is get all employee" });
