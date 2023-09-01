@@ -5,10 +5,10 @@ const employeeRoute = require("./employeeRoute");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("This is API Route!");
 });
 
-router.use("/employees", employeeRoute);
+// router.use("/employees", employeeRoute);
 // router.use("/product", productRoute);
 
 module.exports = router;
