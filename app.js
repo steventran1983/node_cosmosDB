@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
   res.send("Hello World! This is the app te le hot me toala");
 });
 
-// app.use("/api", indexRoute);
+app.use("/api", indexRoute);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
