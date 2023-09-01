@@ -3,7 +3,7 @@ const cors = require("cors");
 const morgan = require("morgan");
 const dotenv = require("dotenv");
 dotenv.config();
-// const indexRoute = require("./routes/indexRoute.js");
+const route = require("./routes/indexRoute.js");
 const app = express();
 const PORT = process.env.PORT || 3000;
 app.use(cors());
@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(morgan("tiny"));
 
 app.get("/", (req, res) => {
-  res.send("Hello World! This is the app te le");
+  res.send("Hello World! This is the app te le hot me");
 });
 
 // app.use("/api", indexRoute);
