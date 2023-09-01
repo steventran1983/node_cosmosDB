@@ -1,5 +1,4 @@
 import { CosmosClient } from "@azure/cosmos";
-import config from "../config.js";
 import * as dotenv from "dotenv";
 dotenv.config();
 
