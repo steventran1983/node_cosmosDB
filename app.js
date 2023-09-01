@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(morgan("tiny"));
 
 app.get("/", (req, res) => {
-  res.send("Hello World! This is the app te le hot me toala");
+  res.send("Hello World! This is the app te le hot me toalaHy Vong thanh cong");
 });
 
 app.use("/api", indexRoute);
