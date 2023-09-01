@@ -4,7 +4,6 @@ dotenv.config();
 
 const endpoint = process.env.COSMOSDB_ENDPOINT;
 const key = process.env.COSMOSDB_KEY;
-const partitionKey = { kind: "Hash", paths: ["/partitionKey"] };
 
 const options = {
   endpoint: endpoint,

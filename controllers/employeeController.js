@@ -1,11 +1,11 @@
 const dotenv = require("dotenv");
 dotenv.config();
-// const client = require("../models/cosmosDB");
+const client = require("../models/cosmosDB");
 
 const getEmployees = async (req, res) => {
-  res.json({ message: "This is get all employee" });
-  // const databaseId = process.env.COSMOSDB_DATABASE;
-  // const containerId = process.env.COSMOSDB_CONTAINER_EMPLOYEES;
+  const databaseId = process.env.COSMOSDB_DATABASE;
+  const containerId = process.env.COSMOSDB_CONTAINER_EMPLOYEES;
+  console.log(databaseId, containerId);
   // try {
   //   const { resources: items } = await client
   //     .database(databaseId)
