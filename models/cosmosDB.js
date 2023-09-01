@@ -1,6 +1,5 @@
 import { CosmosClient } from "@azure/cosmos";
-const { CosmosClient } = require("@azure/cosmos");
-const dotenv = require("dotenv");
+import * as dotenv from "dotenv";
 dotenv.config();
 
 const endpoint = process.env.COSMOSDB_ENDPOINT;
