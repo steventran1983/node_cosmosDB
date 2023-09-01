@@ -3,7 +3,7 @@ const cors = require("cors");
 const morgan = require("morgan");
 const dotenv = require("dotenv");
 dotenv.config();
-const route = require("./routes/indexRoute.js");
+const route = require("./routes/indexRoute");
 const app = express();
 const PORT = process.env.PORT || 3000;
 app.use(cors());
