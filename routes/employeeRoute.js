@@ -1,5 +1,5 @@
-import express from "express";
-import { getEmployees } from "../controllers/employeeController.js";
+const express = require("express");
+const { getEmployees } = require("../controllers/employeeController.js");
 const router = express.Router();
 
 router.get("/", (req, res, next) => {
@@ -8,4 +8,4 @@ router.get("/", (req, res, next) => {
 
 router.use("/all", getEmployees);
 
-export default router;
+module.exports = router;

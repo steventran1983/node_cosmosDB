@@ -1,6 +1,7 @@
-import express from "express";
-import employeeRoute from "./employeeRoute.js";
-import productRoute from "./productRoute.js";
+const express = require("express");
+const employeeRoute = require("./employeeRoute.js");
+
+// const productRoute = require("./productRoute.js");
 const router = express.Router();
 
 router.get("/", (req, res) => {
@@ -8,6 +9,6 @@ router.get("/", (req, res) => {
 });
 
 router.use("/employee", employeeRoute);
-router.use("/product", productRoute);
+// router.use("/product", productRoute);
 
-export default router;
+module.exports = router;

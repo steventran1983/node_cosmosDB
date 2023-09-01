@@ -1,8 +1,8 @@
-import * as dotenv from "dotenv";
+const dotenv = require("dotenv");
 dotenv.config();
-import client from "../models/cosmosDB.js";
+const client = require("../models/cosmosDB.js");
 
-export const getEmployees = async (req, res) => {
+const getEmployees = async (req, res) => {
   const databaseId = process.env.COSMOSDB_DATABASE;
   const containerId = process.env.COSMOSDB_CONTAINER_EMPLOYEES;
   try {
@@ -16,3 +16,5 @@ export const getEmployees = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
+exports.getEmployees = getEmployees;

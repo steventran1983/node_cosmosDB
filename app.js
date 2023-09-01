@@ -1,9 +1,11 @@
-import express from "express";
-import cors from "cors";
-import morgan from "morgan";
-import * as dotenv from "dotenv";
+const express = require("express");
+const cors = require("cors");
+const morgan = require("morgan");
+const dotenv = require("dotenv");
 dotenv.config();
-import indexRoute from "./routes/indexRoute.js";
+
+const indexRoute = require("./routes/indexRoute.js");
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 app.use(cors());
