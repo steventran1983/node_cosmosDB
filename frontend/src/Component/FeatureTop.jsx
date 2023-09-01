@@ -64,7 +64,7 @@ const FeatureTop = () => {
               sx={{
                 display: "flex",
                 justifyContent: "flex-flex-end",
-                columnGap: "2rem",
+                columnGap: "1.5rem",
                 flexWrap: "wrap",
                 rowGap: "2rem",
               }}
