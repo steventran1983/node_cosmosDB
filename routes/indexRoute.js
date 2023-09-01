@@ -1,5 +1,5 @@
 const express = require("express");
-const employeeRoute = require("./employeeRoute");
+// const employeeRoute = require("./employeeRoute");
 
 // const productRoute = require("./productRoute.js");
 const router = express.Router();
