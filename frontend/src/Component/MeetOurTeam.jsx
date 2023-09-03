@@ -47,22 +47,16 @@ const flexStyle = {
   alignItems: "center",
 };
 
-const MeetOurTeam = () => {
+const MeetOurTeam = ({ data }) => {
   const [modal, setModal] = useState(false);
   const [teamContact, setTeamContact] = useState({});
   const handleOnclick = (index) => {
     setModal(true);
-    setTeamContact(teamMembers[index]);
+    setTeamContact(data[index]);
   };
   const handleClose = () => {
     setModal(false);
   };
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getInfo());
-  }, []);
-  const home = useSelector(homeSelector);
-  const { teamMembers } = home.infos;
   return (
     <Container
       maxWidth="xl"
@@ -97,7 +91,7 @@ const MeetOurTeam = () => {
             columnGap: "2rem",
           }}
         >
-          {teamMembers.map((item, index) => {
+          {data.map((item, index) => {
             const {
               id,
               firstname,

@@ -1,21 +1,14 @@
 import React from "react";
-import {
-  Avatar,
-  Box,
-  Button,
-  Container,
-  ListItemAvatar,
-  Typography,
-} from "@mui/material";
+import { Avatar, Box, Button, Container, Typography } from "@mui/material";
 
 import { ThemeProvider } from "@emotion/react";
-import { theme, teamContact, products } from "../../data";
+import { theme } from "../../data";
 import { CardActionArea, CardActions } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "@mui/material/Modal";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
@@ -26,7 +19,9 @@ const handleClick = () => {
   setOpen(!open);
 };
 
-const Products = () => {
+const Products = ({ data }) => {
+  const [modalData, setModalData] = useState({});
+
   const [open, setOpen] = useState(false);
   const handleClick = () => {
     setOpen(!open);
@@ -35,6 +30,15 @@ const Products = () => {
   const [modal, setModal] = useState(false);
   const handleClose = () => {
     setModal(false);
+  };
+
+  const productUpPart = data.filter((product, index) => index < 4);
+  const productBelowPart = data.filter((product, index) => index >= 4);
+
+  // console.log(products);
+  const handleOnclick = (id) => {
+    setModal(true);
+    setModalData(data[id - 1]);
   };
   return (
     <Container
@@ -70,87 +74,17 @@ const Products = () => {
             columnGap: "2rem",
           }}
         >
-          {products.map((product) => {
-            const { id, name, description, image } = product;
-            return (
-              <Card
-                key={id}
-                sx={{
-                  maxWidth: 345,
-                  border: `1px solid ${theme.palette.primary.main}`,
-                }}
-              >
-                <CardActionArea
-                  sx={{
-                    color: theme.palette.primary.main,
-                  }}
-                >
-                  <CardContent>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                        // bgcolor: "rgba(0, 0, 0, 0.2)",
-                        // padding: "1rem 0",
-                      }}
-                    >
-                      <Avatar
-                        src="../../src/assets/images/techicon/quantum.png"
-                        sx={{
-                          width: 100,
-                          height: 100,
-                          border: `1px solid ${theme.palette.primary.main}`,
-                        }}
-                      />
-                    </Box>
-                    <Typography
-                      gutterBottom
-                      variant="h6"
-                      color="primary"
-                      sx={{ marginTop: "0.5rem" }}
-                    >
-                      {name}
-                    </Typography>
-                    <Typography variant="body1" color="text.secondary">
-                      {description}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-                <CardActions>
-                  <Button
-                    onClick={() => setModal(true)}
-                    onClose={() => setModal(false)}
-                    variant="contained"
-                    size="small"
-                    endIcon={<ArrowForwardIosIcon />}
-                    href="#contained-buttons"
-                    color="primary"
-                    sx={{
-                      marginTop: "2rem",
-                    }}
-                  >
-                    More
-                  </Button>
-                </CardActions>
-              </Card>
-            );
-          })}
-        </Box>
-
-        <Box mt="2rem">
-          <Collapse in={open} timeout="auto" unmountOnExit>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                flexWrap: "wrap",
-                rowGap: "2rem",
-                columnGap: "2rem",
-              }}
-            >
-              {products.map((product) => {
-                const { id, name, description, image } = product;
+          {data.length > 0
+            ? productUpPart.map((product, index) => {
+                const {
+                  id,
+                  productname,
+                  description,
+                  goal,
+                  use,
+                  owner,
+                  contributors,
+                } = product;
                 return (
                   <Card
                     key={id}
@@ -160,6 +94,7 @@ const Products = () => {
                     }}
                   >
                     <CardActionArea
+                      onClick={() => handleOnclick(id)}
                       sx={{
                         color: theme.palette.primary.main,
                       }}
@@ -174,11 +109,12 @@ const Products = () => {
                           }}
                         >
                           <Avatar
-                            src={image}
+                            src="https://thangtranweek5.blob.core.windows.net/teamphoto/productlogo.png"
                             sx={{
                               width: 100,
                               height: 100,
                               border: `1px solid ${theme.palette.primary.main}`,
+                              boxShadow: "0 0 10px #E10174",
                             }}
                           />
                         </Box>
@@ -188,7 +124,7 @@ const Products = () => {
                           color="primary"
                           sx={{ marginTop: "0.5rem" }}
                         >
-                          {name}
+                          {productname}
                         </Typography>
                         <Typography variant="body1" color="text.secondary">
                           {description}
@@ -197,12 +133,100 @@ const Products = () => {
                     </CardActionArea>
                     <CardActions>
                       <Button
-                        onClick={() => setModal(true)}
+                        onClick={() => handleOnclick(id)}
                         onClose={() => setModal(false)}
                         variant="contained"
                         size="small"
                         endIcon={<ArrowForwardIosIcon />}
-                        href="#contained-buttons"
+                        color="primary"
+                        sx={{
+                          marginTop: "2rem",
+                        }}
+                      >
+                        More
+                      </Button>
+                    </CardActions>
+                  </Card>
+                );
+              })
+            : ""}
+        </Box>
+
+        <Box mt="2rem">
+          <Collapse in={open} timeout="auto" unmountOnExit>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexWrap: "wrap",
+                rowGap: "2rem",
+                columnGap: "2rem",
+              }}
+            >
+              {productBelowPart.map((product, index) => {
+                const {
+                  id,
+                  productname,
+                  description,
+                  goal,
+                  use,
+                  owner,
+                  contributors,
+                } = product;
+                return (
+                  <Card
+                    key={id}
+                    sx={{
+                      maxWidth: 345,
+                      border: `1px solid ${theme.palette.primary.main}`,
+                    }}
+                  >
+                    <CardActionArea
+                      onClick={() => handleOnclick(id)}
+                      sx={{
+                        color: theme.palette.primary.main,
+                      }}
+                    >
+                      <CardContent>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            justifyContent: "center",
+                            // bgcolor: "rgba(0, 0, 0, 0.2)",
+                            // padding: "1rem 0",
+                          }}
+                        >
+                          <Avatar
+                            src="https://thangtranweek5.blob.core.windows.net/teamphoto/productlogo.png"
+                            sx={{
+                              width: 100,
+                              height: 100,
+                              border: `1px solid ${theme.palette.primary.main}`,
+                              boxShadow: "0 0 10px #E10174",
+                            }}
+                          />
+                        </Box>
+                        <Typography
+                          gutterBottom
+                          variant="h6"
+                          color="primary"
+                          sx={{ marginTop: "0.5rem" }}
+                        >
+                          {productname}
+                        </Typography>
+                        <Typography variant="body1" color="text.secondary">
+                          {description}
+                        </Typography>
+                      </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                      <Button
+                        onClick={() => handleOnclick(id)}
+                        onClose={() => setModal(false)}
+                        variant="contained"
+                        size="small"
+                        endIcon={<ArrowForwardIosIcon />}
                         color="primary"
                         sx={{
                           marginTop: "2rem",
@@ -245,7 +269,7 @@ const Products = () => {
           aria-describedby="modal-modal-description"
         >
           <Box>
-            <ProductModal />
+            <ProductModal data={modalData} />
           </Box>
         </Modal>
       </ThemeProvider>

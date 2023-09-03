@@ -19,6 +19,14 @@ import { Box, Container } from "@mui/material";
 import AOS from "aos";
 import "aos/dist/aos.css";
 const Home = () => {
+  const dispatch = useDispatch();
+  const home = useSelector(homeSelector);
+  useEffect(() => {
+    dispatch(getInfo());
+  }, []);
+
+  console.log(`This is Home page ${home}`);
+  const { teamMembers, products, testimonials } = home.infos;
   return (
     useEffect(() => {
       AOS.init({
@@ -38,7 +46,7 @@ const Home = () => {
           <CountNumber />
         </Box>
         <Box data-aos="fade-up">
-          <MeetOurTeam />
+          <MeetOurTeam data={teamMembers} />
         </Box>
         <Box data-aos="fade-up">
           <FeatureTop />
@@ -49,9 +57,9 @@ const Home = () => {
         <Box data-aos="fade-up">
           <FeatureBottom />
         </Box>
-        <Box data-aos="fade-up">
-          <Products />
-        </Box>
+        {/* <Box data-aos="fade-up"> */}
+        <Products data={products} />
+        {/* </Box> */}
         <Box data-aos="fade-up">
           <Carousel />
         </Box>

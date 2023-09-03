@@ -3,35 +3,34 @@ import { api } from "../../../../data.js";
 import axios from "axios";
 
 const initialState = {
-  products: [],
+  testimonials: [],
   status: "idle",
   error: null,
 };
 
-const productSlice = createSlice({
-  name: "home",
+const testimonialSlice = createSlice({
+  name: "testimonial",
   initialState: initialState,
   extraReducers: (builder) => {
     builder
-      .addCase(getProducts.pending, (state) => {
+      .addCase(getTesttimonials.pending, (state) => {
         state.status = "loading";
       })
-      .addCase(getProducts.fulfilled, (state, action) => {
+      .addCase(getTesttimonials.fulfilled, (state, action) => {
         state.status = "succeeded";
         state.products = action.payload;
       })
-      .addCase(getProducts.rejected, (state) => {
+      .addCase(getTesttimonials.rejected, (state) => {
         state.status = "failed";
       });
   },
 });
 
-export const getProducts = createAsyncThunk(
-  "products/getProducts",
+export const getTesttimonials = createAsyncThunk(
+  "testimonials/getTestimonials",
   async () => {
     try {
-      const response = await axios.get(`${api}/products/all`);
-      console.log(response.data);
+      const response = await axios.get(`${api}/testimonials/all`);
       return response.data;
     } catch (e) {
       return e.response;
@@ -39,4 +38,4 @@ export const getProducts = createAsyncThunk(
   }
 );
 
-export default productSlice;
+export default testimonialSlice;

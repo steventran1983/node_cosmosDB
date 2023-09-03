@@ -4,7 +4,7 @@ import { api } from "../../../../data.js";
 const initialState = {
   infos: {
     teamMembers: [],
-    platforms: [],
+    testimonials: [],
     products: [],
   },
   status: "idle",
@@ -21,7 +21,9 @@ const homeSlice = createSlice({
       })
       .addCase(getInfo.fulfilled, (state, action) => {
         state.status = "succeeded";
-        state.infos.teamMembers = action.payload;
+        state.infos.teamMembers = action.payload.teamMembers;
+        state.infos.products = action.payload.products;
+        state.infos.testimonials = action.payload.testimonials;
       })
       .addCase(getInfo.rejected, (state) => {
         state.status = "failed";
@@ -31,8 +33,16 @@ const homeSlice = createSlice({
 
 export const getInfo = createAsyncThunk("home/getInfo", async () => {
   try {
-    const response = await axios.get(`${api}/employees/all`);
-    return response.data;
+    const responseTeamMebers = await axios.get(`${api}/employees/all`);
+    const responseProducts = await axios.get(`${api}/products/all`);
+    const responsetestimonials = await axios.get(`${api}/testimonials/all`);
+    const response = {
+      teamMembers: responseTeamMebers.data,
+      products: responseProducts.data,
+      testimonials: responsetestimonials.data,
+    };
+    console.log(response);
+    return response;
   } catch (e) {
     return e.response;
   }
