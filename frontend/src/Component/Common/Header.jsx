@@ -8,7 +8,6 @@ import Container from "@mui/material/Container";
 import Tooltip from "@mui/material/Tooltip";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { GetPosts } from "../Pages/Posts/slice";
 
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";

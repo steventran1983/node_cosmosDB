@@ -60,7 +60,7 @@ const Product = ({ product }) => {
           </Button>
         </Box>
         <Collapse in={open} timeout="auto" unmountOnExit>
-          <CollapseComponent data={productname} />
+          <CollapseComponent data={product} />
         </Collapse>
         <Divider />
       </Box>

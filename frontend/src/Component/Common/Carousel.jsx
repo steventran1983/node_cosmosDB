@@ -15,7 +15,7 @@ import Divider from "@mui/material/Divider";
 import Rating from "@mui/material/Rating";
 import ManPhoto from "../../../src/assets/teamavartars/man.png";
 
-const Carousel = ({ category }) => {
+const Carousel = ({ data }) => {
   return (
     <Container
       maxWidth="xl"
@@ -43,9 +43,7 @@ const Carousel = ({ category }) => {
               marginBottom: "2rem",
               fontWeight: "bold",
             }}
-          >
-            {category}
-          </Typography>
+          ></Typography>
         </Box>
         <Swiper
           style={{
@@ -69,7 +67,7 @@ const Carousel = ({ category }) => {
               spaceBetween: 20,
             },
             "@0.75": {
-              slidesPerView: 3,
+              slidesPerView: 2,
               spaceBetween: 20,
             },
             "@1.00": {
@@ -81,26 +79,28 @@ const Carousel = ({ category }) => {
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper"
         >
-          {testimonials.map((testimonial) => {
-            const { id, name, role, description1, Description2 } = testimonial;
+          {data.map((testimonial) => {
+            const { id, name, role, title, image, regconition } = testimonial;
             return (
               <SwiperSlide key={id}>
                 <Card
                   sx={{
-                    maxWidth: 400,
+                    minWidth: 350,
                     display: "flex",
                     justifyContent: "space-between",
                     alignItems: "center",
                     padding: "1rem",
                     margin: "1rem",
                     columnGap: "1rem",
+                    border: `2px solid ${theme.palette.primary.main}`,
+                    borderRadius: "1rem",
                     // backgroundColor: `${theme.palette.primary.light}}`,
                   }}
                 >
                   <Box>
                     <img
                       src={ManPhoto}
-                      alt={teamContact[1].image}
+                      alt={name}
                       width={100}
                       height={100}
                       style={{
@@ -114,7 +114,7 @@ const Carousel = ({ category }) => {
                       {name}
                     </Typography>
                     <Typography pb="2rem">{role}</Typography>
-                    <Typography variant="h5">{description1}</Typography>
+                    <Typography variant="h5">{title}</Typography>
 
                     <Rating name="size-medium" value={5} readOnly />
 
@@ -123,7 +123,7 @@ const Carousel = ({ category }) => {
                       color="text.secondary"
                       pt="1rem"
                     >
-                      {Description2}
+                      {regconition}
                     </Typography>
                   </Box>
                 </Card>

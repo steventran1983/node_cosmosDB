@@ -7,8 +7,8 @@ import { CardActionArea, CardActions } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-
-import { useState, useEffect } from "react";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { useState } from "react";
 import Modal from "@mui/material/Modal";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
@@ -85,11 +85,16 @@ const Products = ({ data }) => {
                   owner,
                   contributors,
                 } = product;
+
+                let descShort = "";
+                description.length > 100
+                  ? (descShort = description.slice(0, 100) + "...")
+                  : (descShort = description);
                 return (
                   <Card
                     key={id}
                     sx={{
-                      maxWidth: 345,
+                      maxWidth: 300,
                       border: `1px solid ${theme.palette.primary.main}`,
                     }}
                   >
@@ -127,7 +132,7 @@ const Products = ({ data }) => {
                           {productname}
                         </Typography>
                         <Typography variant="body1" color="text.secondary">
-                          {description}
+                          {descShort}
                         </Typography>
                       </CardContent>
                     </CardActionArea>
@@ -174,11 +179,15 @@ const Products = ({ data }) => {
                   owner,
                   contributors,
                 } = product;
+                let descShort = "";
+                description.length > 100
+                  ? (descShort = description.slice(0, 100) + "...")
+                  : (descShort = description);
                 return (
                   <Card
                     key={id}
                     sx={{
-                      maxWidth: 345,
+                      maxWidth: 300,
                       border: `1px solid ${theme.palette.primary.main}`,
                     }}
                   >
@@ -216,7 +225,7 @@ const Products = ({ data }) => {
                           {productname}
                         </Typography>
                         <Typography variant="body1" color="text.secondary">
-                          {description}
+                          {descShort}
                         </Typography>
                       </CardContent>
                     </CardActionArea>

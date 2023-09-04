@@ -52,16 +52,16 @@ const Home = () => {
           <FeatureTop />
         </Box>
         <Box data-aos="fade-up">
-          <Platforms />
+          <Products data={products} />
         </Box>
         <Box data-aos="fade-up">
           <FeatureBottom />
         </Box>
-        {/* <Box data-aos="fade-up"> */}
-        <Products data={products} />
-        {/* </Box> */}
+        {/* <Box data-aos="fade-up">
+          <Platforms />
+        </Box> */}
         <Box data-aos="fade-up">
-          <Carousel />
+          <Carousel data={testimonials} />
         </Box>
       </Container>
     )
