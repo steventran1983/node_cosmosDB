@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import ProductModal from "../../ProductModal";
 import { ThemeProvider } from "@emotion/react";
-import { theme, teamContact, products } from "../../../../data";
+import { theme } from "../../../../data";
 import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
 import CloudIcon from "@mui/icons-material/Cloud";
 import {
@@ -26,7 +26,6 @@ import Divider from "@mui/material/Divider";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import Collapse from "@mui/material/Collapse";
-import { platforms_collapse } from "../../../../data";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 const style = {
   position: "absolute",

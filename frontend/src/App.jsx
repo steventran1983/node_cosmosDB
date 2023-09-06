@@ -23,7 +23,7 @@ function App() {
             <Route path="/team" element={<Team />}></Route>
             <Route path="/platforms" element={<Platforms />}></Route>
             <Route path="/products" element={<Products />}></Route>
-            <Route path="/achievements" element={<Achievements />}></Route>
+            {/* <Route path="/achievements" element={<Achievements />}></Route> */}
             {/* <Route path="/products/edit/:id" element={<EditProduct />}></Route>
           <Route path="/posts" element={<Posts />}></Route>
         <Route path="/cart" element={<Cart />}></Route> */}

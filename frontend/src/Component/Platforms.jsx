@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 
 import { ThemeProvider } from "@emotion/react";
-import { theme, platforms, platforms_collapse } from "../../data";
+import { theme } from "../../data";
 import { CardActionArea, CardActions } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Card from "@mui/material/Card";

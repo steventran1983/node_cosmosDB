@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 
 import { ThemeProvider } from "@emotion/react";
-import { theme, teamContact } from "../../data";
+import { theme } from "../../data";
 import { CardActionArea, CardActions } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
