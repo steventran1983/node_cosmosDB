@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 
 import { ThemeProvider } from "@emotion/react";
-import { theme, teamContact, platforms } from "../../data";
+import { theme } from "../../data";
 import CloudIcon from "@mui/icons-material/Cloud";
 import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
 

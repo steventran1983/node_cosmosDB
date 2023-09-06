@@ -79,11 +79,16 @@ const FeatureTop = () => {
               <img className="feature-icon" src={nodejs} alt="nodejs" />
               <img className="feature-icon" src={hadoop} alt="hadoop" />
             </Box>
-            <Typography align="left" style={{ color: "white" }}>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam
-              natus delectus, nam, possimus sapiente quos accusantium ipsam
-              tenetur minus aliquid, error quibusdam. Optio magni inventore ab
-              earum sapiente alias repellat!
+            <Typography
+              align="left"
+              style={{ color: "white", lineHeight: "2rem" }}
+            >
+              We harness the power of technology to drive forward the pace of
+              change in software development. This strategic utilization of
+              technology equips us with a formidable arsenal of cutting-edge
+              tools, innovative methodologies, and automation solutions that
+              collectively bolster efficiency, foster collaboration, and fortify
+              adaptability within our development processes.
             </Typography>
           </Box>
 

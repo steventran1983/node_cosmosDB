@@ -95,7 +95,11 @@ const Products = ({ data }) => {
                     key={id}
                     sx={{
                       maxWidth: 300,
+                      height: 370,
                       border: `1px solid ${theme.palette.primary.main}`,
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "space-between",
                     }}
                   >
                     <CardActionArea

@@ -9,7 +9,7 @@ import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import "./styles.css";
-import { theme, teamContact, testimonials } from "../../../data";
+import { theme } from "../../../data";
 import { ThemeProvider } from "@emotion/react";
 import Divider from "@mui/material/Divider";
 import Rating from "@mui/material/Rating";
@@ -20,6 +20,7 @@ const Carousel = ({ data }) => {
     <Container
       maxWidth="xl"
       sx={{
+        marginTop: "4rem",
         marginBottom: "2rem",
       }}
     >

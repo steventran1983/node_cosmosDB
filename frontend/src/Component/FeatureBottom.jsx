@@ -4,7 +4,7 @@ import { theme } from "../../data";
 import { ThemeProvider } from "@emotion/react";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import { Typography } from "@mui/material";
+import { Divider, Typography } from "@mui/material";
 import azure from "../assets/images/techicon/azure.png";
 import databrick from "../assets/images/techicon/databrick.png";
 import react from "../assets/images/techicon/react.png";
@@ -64,17 +64,24 @@ const FeatureBottom = () => {
                   WebkitBackgroundClip: "text",
                   webkitTextFillColor: "transparent",
                   fontSize: "3rem",
+                  padding: 0,
+                  margin: 0,
                 }}
               >
-                Data engineering lies at the heart of our mission
+                Data engineering and Cloud Computing lie at the heart of our
+                mission
               </h1>
             </Box>
-
-            <Typography align="left" style={{ color: "white" }}>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam
-              natus delectus, nam, possimus sapiente quos accusantium ipsam
-              tenetur minus aliquid, error quibusdam. Optio magni inventore ab
-              earum sapiente alias repellat!
+            <Divider sx={{ bgcolor: "secondary.light" }} />
+            <Typography
+              align="left"
+              style={{ color: "white", lineHeight: "2rem" }}
+            >
+              At the Data Engineering & Cloud Computing Team, we believe that
+              data is the foundation of innovation and the cloud is the future
+              of computing. Our team is dedicated to helping organizations
+              harness the full potential of their data by providing cutting-edge
+              data engineering and cloud computing solutions.
             </Typography>
           </Box>
         </Box>

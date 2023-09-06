@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import ProductModal from "../../ProductModal";
 import { ThemeProvider } from "@emotion/react";
-import { theme, teamContact } from "../../../../data";
+import { theme } from "../../../../data";
 import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
 import CloudIcon from "@mui/icons-material/Cloud";
 import { Avatar, Box, Container, Typography, AvatarGroup } from "@mui/material";
