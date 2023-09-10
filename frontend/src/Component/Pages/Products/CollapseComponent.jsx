@@ -52,8 +52,16 @@ export const CollapseComponent = ({ data }) => {
               }}
             />
           </Box>
-          <Box>
-            <Typography pb="1rem">{description}</Typography>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+            }}
+          >
+            <Typography variant="h6" align="left" pb="1rem">
+              {description}
+            </Typography>
             <Box
               sx={{
                 paddingLeft: "2rem",
@@ -67,7 +75,7 @@ export const CollapseComponent = ({ data }) => {
                 }}
               >
                 <CloudIcon />
-                <Typography>{use}</Typography>
+                <Typography align="left">Use: {use}</Typography>
               </Box>
               <Box
                 sx={{
@@ -77,7 +85,7 @@ export const CollapseComponent = ({ data }) => {
                 }}
               >
                 <CloudIcon />
-                <Typography>Goals - {goal}</Typography>
+                <Typography align="left">Goals: {goal}</Typography>
               </Box>
               <Box
                 sx={{
@@ -87,7 +95,7 @@ export const CollapseComponent = ({ data }) => {
                 }}
               >
                 <CloudIcon />
-                <Typography>Owner - {owner}</Typography>
+                <Typography align="left">Owner: {owner}</Typography>
               </Box>
               <Box
                 sx={{
@@ -97,8 +105,8 @@ export const CollapseComponent = ({ data }) => {
                 }}
               >
                 <CloudIcon />
-                <Typography>
-                  Main Contacts - Who can I contact to learn more?
+                <Typography align="left">
+                  Main Contacts: {contributors[0].name}, {contributors[0].email}
                 </Typography>
               </Box>
             </Box>

@@ -62,7 +62,7 @@ const ProductModal = ({ data }) => {
           </Box>
           <Box>
             <Typography
-              variant="h3"
+              variant="h4"
               align="center"
               sx={{
                 color: theme.palette.primary.main,

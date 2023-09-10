@@ -22,6 +22,7 @@ const Carousel = ({ data }) => {
       sx={{
         marginTop: "4rem",
         marginBottom: "2rem",
+        // width: "768",
       }}
     >
       <ThemeProvider theme={theme}>
@@ -51,10 +52,10 @@ const Carousel = ({ data }) => {
             "--swiper-navigation-color": "#E10174",
             padding: "2rem 2rem 0 2rem",
           }}
-          spaceBetween={20}
-          slidesPerView={1}
+          spaceBetween={24}
+          slidesPerView={3}
           loop={true}
-          centeredSlides={true}
+          // centeredSlides={true}
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
@@ -63,17 +64,12 @@ const Carousel = ({ data }) => {
             clickable: true,
           }}
           breakpoints={{
-            "@0.00": {
-              slidesPerView: 1,
-              spaceBetween: 20,
-            },
-            "@0.75": {
+            576: {
               slidesPerView: 2,
-              spaceBetween: 20,
             },
-            "@1.00": {
-              slidesPerView: 3,
-              spaceBetween: 20,
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 50,
             },
           }}
           navigation={true}
@@ -87,6 +83,7 @@ const Carousel = ({ data }) => {
                 <Card
                   sx={{
                     minWidth: 350,
+                    height: "300px",
                     display: "flex",
                     justifyContent: "space-between",
                     alignItems: "center",
@@ -102,8 +99,8 @@ const Carousel = ({ data }) => {
                     <img
                       src={ManPhoto}
                       alt={name}
-                      width={100}
-                      height={100}
+                      width={70}
+                      height={70}
                       style={{
                         borderRadius: "50%",
                         border: `1px solid ${theme.palette.primary.main}`,

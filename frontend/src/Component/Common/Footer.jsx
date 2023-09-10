@@ -4,11 +4,12 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import Link from "@mui/material/Link";
+import { Link } from "react-router-dom";
 import { theme } from "../../../data";
 import "./styles.css";
 import quantumPhoto from "../../assets/images/quantum.png";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import EmailIcon from "@mui/icons-material/Email";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 const Copyright = () => {
@@ -16,7 +17,7 @@ const Copyright = () => {
     <Typography
       variant="body1"
       sx={{
-        color: theme.palette.primary.main,
+        color: "white",
         marginBottom: "1rem",
       }}
     >
@@ -65,21 +66,8 @@ const Footer = () => {
             color: theme.palette.primary.main,
           }}
         >
-          Quantum
+          QUANTUM
         </Typography>
-      </Box>
-      <Box
-        sx={{
-          marginTop: "1rem",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          columnGap: "3rem",
-        }}
-      >
-        <Typography color="white">Products</Typography>
-        <Typography color="white">Contact Us</Typography>
-        <Typography color="white">Useful Links</Typography>
       </Box>
 
       <Box
@@ -91,6 +79,12 @@ const Footer = () => {
           columnGap: "2rem",
         }}
       >
+        <EmailIcon
+          sx={{
+            color: theme.palette.primary.main,
+            fontSize: "2rem",
+          }}
+        />
         <LinkedInIcon
           sx={{
             color: theme.palette.primary.main,
