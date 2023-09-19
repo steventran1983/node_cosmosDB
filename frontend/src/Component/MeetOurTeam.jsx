@@ -52,7 +52,9 @@ const MeetOurTeam = ({ data }) => {
   const [teamContact, setTeamContact] = useState({});
   const handleOnclick = (index) => {
     setModal(true);
-    setTeamContact(data[index]);
+    console.log(id);
+    console.log(["teammember"], teamMembers);
+    setTeamContact(teamMembers[index]);
   };
   const handleClose = () => {
     setModal(false);
@@ -60,8 +62,6 @@ const MeetOurTeam = ({ data }) => {
   const teamMembers = [...data];
   const compareById = (a, b) => a.id - b.id;
   data ? teamMembers.sort(compareById) : "";
-
-  // data.sort((a, b) => a.Number(id) - b.Number(id));
   return (
     <Container
       maxWidth="xl"
