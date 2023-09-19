@@ -52,7 +52,6 @@ const MeetOurTeam = ({ data }) => {
   const [teamContact, setTeamContact] = useState({});
   const handleOnclick = (index) => {
     setModal(true);
-    console.log(id);
     console.log(["teammember"], teamMembers);
     setTeamContact(teamMembers[index]);
   };
