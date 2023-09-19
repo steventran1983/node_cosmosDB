@@ -57,6 +57,11 @@ const MeetOurTeam = ({ data }) => {
   const handleClose = () => {
     setModal(false);
   };
+  const teamMembers = [...data];
+  const compareById = (a, b) => a.id - b.id;
+  data ? teamMembers.sort(compareById) : "";
+
+  // data.sort((a, b) => a.Number(id) - b.Number(id));
   return (
     <Container
       maxWidth="xl"
@@ -91,7 +96,7 @@ const MeetOurTeam = ({ data }) => {
             columnGap: "2rem",
           }}
         >
-          {data.map((item, index) => {
+          {teamMembers.map((item, index) => {
             const {
               id,
               firstname,
