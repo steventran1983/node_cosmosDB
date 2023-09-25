@@ -29,3 +29,22 @@ export const theme = createTheme({
 
 export const api = "https://dii-portfolio-deploy.azurewebsites.net/api";
 // export const api = "http://localhost:4000/api";
+
+export const avaratMap = {
+  Vikas: "https://thangtranweek5.blob.core.windows.net/teamphoto/Thang.png",
+  Srid: "https://thangtranweek5.blob.core.windows.net/teamphoto/Srid.png",
+  Thang: "https://thangtranweek5.blob.core.windows.net/teamphoto/Thang.png",
+  Sonali: "https://thangtranweek5.blob.core.windows.net/teamphoto/Sonali.png",
+  Tom: "https://thangtranweek5.blob.core.windows.net/teamphoto/Tom.png",
+  Raymond: "https://thangtranweek5.blob.core.windows.net/teamphoto/Raymond.png",
+  Manjith: "https://thangtranweek5.blob.core.windows.net/teamphoto/Manjith.png",
+  Darren: "https://thangtranweek5.blob.core.windows.net/teamphoto/Darren.png",
+  Statos: "https://thangtranweek5.blob.core.windows.net/teamphoto/Statos.png",
+  Anand: "https://thangtranweek5.blob.core.windows.net/teamphoto/Anand.png",
+  Rod: "https://thangtranweek5.blob.core.windows.net/teamphoto/Rod.png",
+  Shalini: "https://thangtranweek5.blob.core.windows.net/teamphoto/Shalini.png",
+  Rich: "https://thangtranweek5.blob.core.windows.net/teamphoto/Rich.png",
+  Monte: "https://thangtranweek5.blob.core.windows.net/teamphoto/Monte.png",
+  Stephen: "https://thangtranweek5.blob.core.windows.net/teamphoto/Stephen.png",
+  Other: "https://thangtranweek5.blob.core.windows.net/teamphoto/Other.png",
+};
