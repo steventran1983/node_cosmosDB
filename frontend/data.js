@@ -31,7 +31,7 @@ export const api = "https://dii-portfolio-deploy.azurewebsites.net/api";
 // export const api = "http://localhost:4000/api";
 
 export const avaratMap = {
-  Vikas: "https://thangtranweek5.blob.core.windows.net/teamphoto/Thang.png",
+  Vikas: "https://thangtranweek5.blob.core.windows.net/teamphoto/Vikas.png",
   Srid: "https://thangtranweek5.blob.core.windows.net/teamphoto/Srid.png",
   Thang: "https://thangtranweek5.blob.core.windows.net/teamphoto/Thang.png",
   Sonali: "https://thangtranweek5.blob.core.windows.net/teamphoto/Sonali.png",

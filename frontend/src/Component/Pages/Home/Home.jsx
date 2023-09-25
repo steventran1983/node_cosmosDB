@@ -3,10 +3,9 @@ import Hero from "../../Hero";
 import MeetOurTeam from "../../MeetOurTeam";
 import Carousel from "../../Common/Carousel";
 import FeatureTop from "../../FeatureTop";
+import Patents from "../../Patents";
 import "./homeStyles.css";
 import Products from "../../Products";
-import Platforms from "../../Platforms";
-import Footer from "../../Common/Footer";
 import CssBaseline from "@mui/material/CssBaseline";
 import CountNumber from "../../CountNumber";
 import FeatureBottom from "../../FeatureBottom";
@@ -18,6 +17,7 @@ import { useEffect } from "react";
 import { Box, Container } from "@mui/material";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
 const Home = () => {
   const dispatch = useDispatch();
   const home = useSelector(homeSelector);
@@ -26,7 +26,7 @@ const Home = () => {
   }, []);
 
   console.log(`This is Home page ${home}`);
-  const { teamMembers, products, testimonials } = home.infos;
+  const { teamMembers, products, testimonials, patents } = home.infos;
   return (
     useEffect(() => {
       AOS.init({
@@ -51,6 +51,7 @@ const Home = () => {
         <Box data-aos="fade-up">
           <FeatureTop />
         </Box>
+        <Patents data={patents} />
         <Box data-aos="fade-up">
           <Products data={products} />
         </Box>
