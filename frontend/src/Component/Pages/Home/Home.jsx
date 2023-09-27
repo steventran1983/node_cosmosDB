@@ -17,6 +17,7 @@ import { useEffect } from "react";
 import { Box, Container } from "@mui/material";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import SkeletonTeam from "../../Common/SkeletonTeam";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -45,13 +46,16 @@ const Home = () => {
           <Hero />
           <CountNumber />
         </Box>
+        <SkeletonTeam />
         <Box data-aos="fade-up">
           <MeetOurTeam data={teamMembers} />
         </Box>
         <Box data-aos="fade-up">
           <FeatureTop />
         </Box>
-        <Patents data={patents} />
+        <Box data-aos="fade-up">
+          <Patents data={patents} />
+        </Box>
         <Box data-aos="fade-up">
           <Products data={products} />
         </Box>

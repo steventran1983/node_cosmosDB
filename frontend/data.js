@@ -32,6 +32,7 @@ export const api = "https://dii-portfolio-deploy.azurewebsites.net/api";
 
 export const avaratMap = {
   Vikas: "https://thangtranweek5.blob.core.windows.net/teamphoto/Vikas.png",
+  Jai: "https://thangtranweek5.blob.core.windows.net/teamphoto/Jai.png",
   Srid: "https://thangtranweek5.blob.core.windows.net/teamphoto/Srid.png",
   Thang: "https://thangtranweek5.blob.core.windows.net/teamphoto/Thang.png",
   Sonali: "https://thangtranweek5.blob.core.windows.net/teamphoto/Sonali.png",
@@ -46,5 +47,18 @@ export const avaratMap = {
   Rich: "https://thangtranweek5.blob.core.windows.net/teamphoto/Rich.png",
   Monte: "https://thangtranweek5.blob.core.windows.net/teamphoto/Monte.png",
   Stephen: "https://thangtranweek5.blob.core.windows.net/teamphoto/Stephen.png",
-  Other: "https://thangtranweek5.blob.core.windows.net/teamphoto/Other.png",
+  Diglio: "https://thangtranweek5.blob.core.windows.net/teamphoto/other.png",
+  Arun: "https://thangtranweek5.blob.core.windows.net/teamphoto/other_3.png",
+  Arman: "https://thangtranweek5.blob.core.windows.net/teamphoto/other.png",
+  Jason: "https://thangtranweek5.blob.core.windows.net/teamphoto/other_1.png",
+  Gavin: "https://thangtranweek5.blob.core.windows.net/teamphoto/other_2.png",
+  Aditi: "https://thangtranweek5.blob.core.windows.net/teamphoto/other_2.png",
+  Julio: "https://thangtranweek5.blob.core.windows.net/teamphoto/other_3.png",
+  Peter: "https://thangtranweek5.blob.core.windows.net/teamphoto/Peter.png",
+  Lance: "https://thangtranweek5.blob.core.windows.net/teamphoto/other.png",
+  Diglio: "https://thangtranweek5.blob.core.windows.net/teamphoto/other_2.png",
+  Stratos: "https://thangtranweek5.blob.core.windows.net/teamphoto/Stratos.png",
+  Sri: "https://thangtranweek5.blob.core.windows.net/teamphoto/Srid.png",
+  Kiran: "https://thangtranweek5.blob.core.windows.net/teamphoto/other_3.png",
+  Bhavin: "https://thangtranweek5.blob.core.windows.net/teamphoto/other.png",
 };
