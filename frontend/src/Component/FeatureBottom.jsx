@@ -5,16 +5,6 @@ import { ThemeProvider } from "@emotion/react";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import { Divider, Typography } from "@mui/material";
-import azure from "../assets/images/techicon/azure.png";
-import databrick from "../assets/images/techicon/databrick.png";
-import react from "../assets/images/techicon/react.png";
-import snowflake01 from "../assets/images/techicon/snowflake01.png";
-import scala from "../assets/images/techicon/scala.png";
-import python from "../assets/images/techicon/python.png";
-import Tableau from "../assets/images/techicon/Tableau.png";
-import nodejs from "../assets/images/techicon/nodejs.png";
-import hadoop from "../assets/images/techicon/hadoop.png";
-import Image from "mui-image";
 import featureImage from "../assets/images/techicon/7.png";
 const FeatureBottom = () => {
   return (

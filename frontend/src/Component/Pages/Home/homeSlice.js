@@ -6,6 +6,7 @@ const initialState = {
     teamMembers: [],
     testimonials: [],
     products: [],
+    patents: [],
   },
   status: "idle",
   error: null,
@@ -24,6 +25,7 @@ const homeSlice = createSlice({
         state.infos.teamMembers = action.payload.teamMembers;
         state.infos.products = action.payload.products;
         state.infos.testimonials = action.payload.testimonials;
+        state.infos.patents = action.payload.patents;
       })
       .addCase(getInfo.rejected, (state) => {
         state.status = "failed";
@@ -36,10 +38,12 @@ export const getInfo = createAsyncThunk("home/getInfo", async () => {
     const responseTeamMebers = await axios.get(`${api}/employees/all`);
     const responseProducts = await axios.get(`${api}/products/all`);
     const responsetestimonials = await axios.get(`${api}/testimonials/all`);
+    const responsePatents = await axios.get(`${api}/patents/all`);
     const response = {
       teamMembers: responseTeamMebers.data,
       products: responseProducts.data,
       testimonials: responsetestimonials.data,
+      patents: responsePatents.data,
     };
     console.log(response);
     return response;
