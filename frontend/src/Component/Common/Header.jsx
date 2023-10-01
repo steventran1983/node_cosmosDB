@@ -144,7 +144,7 @@ function ResponsiveAppBar() {
                 <Avatar sx={{ bgcolor: `${magetanColor}` }}>T</Avatar>
               </Box> */}
               <Box sx={{ flexGrow: 0 }}>
-                <Tooltip title="Open settings">
+                <Tooltip title="Team Contact">
                   <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                     <Avatar
                       sx={{
