@@ -305,6 +305,21 @@ const MeetOurTeam = ({ data }) => {
             </Box>
           </Box>
         </Modal>
+        <Box
+          sx={{
+            position: "absolute",
+            zIndex: "-1",
+            width: "600px",
+            height: "600px",
+            left: "0",
+            top: "200px",
+            // background: "linear-gradient(90deg, #FB0087 0%, #FFFFFF 100%)",
+            background: "#FB0087 ",
+            filter: "blur(400px)",
+            // opacity: "0.9",
+            borderRadius: "50%",
+          }}
+        ></Box>
       </ThemeProvider>
     </Container>
   );

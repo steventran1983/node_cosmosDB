@@ -17,8 +17,9 @@ import { useEffect } from "react";
 import { Box, Container } from "@mui/material";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import SkeletonTeam from "../../Common/SkeletonTeam";
-
+import MeetTeamSkeleton from "../../Skeleton/MeetTeamSkeleton";
+import PatentSkeleton from "../../Skeleton/PatentSkeleton";
+import TestinomialSkeleton from "../../Skeleton/TestinomialSkeleton";
 const Home = () => {
   const dispatch = useDispatch();
   const home = useSelector(homeSelector);
@@ -27,7 +28,9 @@ const Home = () => {
   }, []);
 
   console.log(`This is Home page ${home}`);
+  const { status } = home;
   const { teamMembers, products, testimonials, patents } = home.infos;
+
   return (
     useEffect(() => {
       AOS.init({
@@ -46,28 +49,56 @@ const Home = () => {
           <Hero />
           <CountNumber />
         </Box>
-        <SkeletonTeam />
-        <Box data-aos="fade-up">
-          <MeetOurTeam data={teamMembers} />
-        </Box>
+        {/* <SkeletonTeam /> */}
+
+        {status == "loading" ? (
+          <Box data-aos="fade-up">
+            <MeetTeamSkeleton />
+          </Box>
+        ) : (
+          <Box data-aos="fade-up">
+            <MeetOurTeam data={teamMembers} />
+          </Box>
+        )}
         <Box data-aos="fade-up">
           <FeatureTop />
         </Box>
-        <Box data-aos="fade-up">
-          <Patents data={patents} />
-        </Box>
-        <Box data-aos="fade-up">
-          <Products data={products} />
-        </Box>
+
+        {status == "loading" ? (
+          <Box data-aos="fade-up">
+            <PatentSkeleton />
+          </Box>
+        ) : (
+          <Box data-aos="fade-up">
+            <Patents data={patents} />
+          </Box>
+        )}
+
+        {status == "loading" ? (
+          <Box data-aos="fade-up">
+            <MeetTeamSkeleton />
+          </Box>
+        ) : (
+          <Box data-aos="fade-up">
+            <Products data={products} />
+          </Box>
+        )}
+
         <Box data-aos="fade-up">
           <FeatureBottom />
         </Box>
         {/* <Box data-aos="fade-up">
           <Platforms />
         </Box> */}
-        <Box data-aos="fade-up">
-          <Carousel data={testimonials} />
-        </Box>
+        {status == "loading" ? (
+          <Box data-aos="fade-up">
+            <TestinomialSkeleton />
+          </Box>
+        ) : (
+          <Box data-aos="fade-up">
+            <Carousel data={testimonials} />
+          </Box>
+        )}
       </Container>
     )
   );

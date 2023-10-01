@@ -86,6 +86,21 @@ const Patents = ({ data }) => {
               );
             })
           : ""}
+        <Box
+          sx={{
+            position: "absolute",
+            zIndex: "-1",
+            width: "600px",
+            height: "600px",
+            right: "0",
+            bottom: "100px",
+            background: "linear-gradient(90deg, #FB0087 0%, #FFFFFF 100%)",
+            // background: "FB0087",
+            filter: "blur(200px)",
+            // opacity: "0.9",
+            borderRadius: "50%",
+          }}
+        ></Box>
       </ThemeProvider>
     </Container>
   );
