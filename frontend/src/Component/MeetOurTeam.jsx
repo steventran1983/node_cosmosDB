@@ -65,7 +65,7 @@ const MeetOurTeam = ({ data }) => {
     <Container
       maxWidth="xl"
       sx={{
-        marginTop: "4rem",
+        marginTop: "2rem",
       }}
     >
       <ThemeProvider theme={theme}>
@@ -105,7 +105,9 @@ const MeetOurTeam = ({ data }) => {
               image,
               contact,
               project,
+              skill,
             } = item;
+
             return (
               <Card
                 key={id}
@@ -185,6 +187,7 @@ const MeetOurTeam = ({ data }) => {
             );
           })}
         </Box>
+        {/* This is the part of Modal */}
         <Modal
           open={modal}
           onClose={() => setModal(false)}
@@ -230,16 +233,30 @@ const MeetOurTeam = ({ data }) => {
               <Typography align="left" pb="1rem">
                 {teamContact.bio}
               </Typography>
+              <Typography
+                variant="h4"
+                align="center"
+                // sx={{
+                //   color: theme.palette.primary.main,
+                // }}
+              >
+                Skill Sets
+              </Typography>
               <Typography align="left" variant="h6">
-                Works on:
+                Platform:
               </Typography>
               <Box
                 sx={{
-                  paddingLeft: "2rem",
+                  paddingLeft: "1rem",
+                  paddingBottom: "0.5rem",
+                  display: "flex",
+                  justifyContent: "flex-start",
+                  flexWrap: "wrap",
+                  // columnGap: "1rem",
                 }}
               >
-                {teamContact.project
-                  ? teamContact.project.map((item, index) => (
+                {teamContact.skill
+                  ? teamContact.skill.platform.map((item, index) => (
                       <Box
                         key={index}
                         sx={{
@@ -248,8 +265,74 @@ const MeetOurTeam = ({ data }) => {
                           color: `${theme.palette.primary.main}`,
                         }}
                       >
-                        <CloudIcon />
-                        <Typography>{item}</Typography>
+                        {index === teamContact.skill.platform.length - 1 ? (
+                          <Typography>{` ${item} `}</Typography>
+                        ) : (
+                          <Typography>{` ${item} , `}</Typography>
+                        )}
+                      </Box>
+                    ))
+                  : ""}
+              </Box>
+              <Typography align="left" variant="h6">
+                Programming Languages:
+              </Typography>
+              <Box
+                sx={{
+                  paddingLeft: "1rem",
+                  paddingBottom: "0.5rem",
+                  display: "flex",
+                  justifyContent: "flex-start",
+                  flexWrap: "wrap",
+                  // columnGap: "1rem",
+                }}
+              >
+                {teamContact.skill
+                  ? teamContact.skill.programming.map((item, index) => (
+                      <Box
+                        key={index}
+                        sx={{
+                          ...flexStyle,
+                          columnGap: "1rem",
+                          color: `${theme.palette.primary.main}`,
+                        }}
+                      >
+                        {index === teamContact.skill.platform.length - 1 ? (
+                          <Typography>{` ${item} `}</Typography>
+                        ) : (
+                          <Typography>{` ${item} , `}</Typography>
+                        )}
+                      </Box>
+                    ))
+                  : ""}
+              </Box>
+              <Typography align="left" variant="h6">
+                Database/Dataware House:
+              </Typography>
+              <Box
+                sx={{
+                  paddingLeft: "1rem",
+                  paddingBottom: "0.5rem",
+                  display: "flex",
+                  justifyContent: "flex-start",
+                  flexWrap: "wrap",
+                }}
+              >
+                {teamContact.skill
+                  ? teamContact.skill.database.map((item, index) => (
+                      <Box
+                        key={index}
+                        sx={{
+                          ...flexStyle,
+                          columnGap: "1rem",
+                          color: `${theme.palette.primary.main}`,
+                        }}
+                      >
+                        {index === teamContact.skill.platform.length - 1 ? (
+                          <Typography>{` ${item} `}</Typography>
+                        ) : (
+                          <Typography>{` ${item} , `}</Typography>
+                        )}
                       </Box>
                     ))
                   : ""}
@@ -259,7 +342,7 @@ const MeetOurTeam = ({ data }) => {
               </Typography>
               <Box
                 sx={{
-                  paddingLeft: "2rem",
+                  paddingLeft: "1rem",
                 }}
               >
                 <Box
