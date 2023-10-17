@@ -27,7 +27,7 @@ export const theme = createTheme({
 
 // make a array for team contact with id
 
-export const api = "https://dii-portfolio-deploy.azurewebsites.net/api";
+export const api = "https://dii-portfolio.azurewebsites.net/api";
 // export const api = "http://localhost:4000/api";
 
 export const avaratMap = {
