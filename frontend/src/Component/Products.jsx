@@ -76,19 +76,11 @@ const Products = ({ data }) => {
         >
           {data.length > 0
             ? productUpPart.map((product, index) => {
-                const {
-                  id,
-                  productname,
-                  description,
-                  goal,
-                  use,
-                  owner,
-                  contributors,
-                } = product;
+                const { id, productname, description } = product;
 
                 let descShort = "";
                 description.length > 100
-                  ? (descShort = description.slice(0, 100) + "...")
+                  ? (descShort = description.slice(0, 80) + "...")
                   : (descShort = description);
                 return (
                   <Card
@@ -185,14 +177,18 @@ const Products = ({ data }) => {
                 } = product;
                 let descShort = "";
                 description.length > 100
-                  ? (descShort = description.slice(0, 100) + "...")
+                  ? (descShort = description.slice(0, 80) + "...")
                   : (descShort = description);
                 return (
                   <Card
                     key={id}
                     sx={{
                       maxWidth: 300,
+                      height: 370,
                       border: `1px solid ${theme.palette.primary.main}`,
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "space-between",
                     }}
                   >
                     <CardActionArea

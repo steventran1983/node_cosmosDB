@@ -13,6 +13,7 @@ import { ThemeProvider } from "@emotion/react";
 import { theme } from "../../data";
 import CloudIcon from "@mui/icons-material/Cloud";
 import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
+import Divider from "@mui/material/Divider";
 
 const style = {
   position: "absolute",
@@ -64,13 +65,14 @@ const ProductModal = ({ data }) => {
             <Typography
               variant="h4"
               align="center"
+              pt="1rem"
               sx={{
                 color: theme.palette.primary.main,
               }}
             >
               {productname}
             </Typography>
-            <Typography pb="1rem">
+            <Typography variant="h6" pb="1rem" pt="1rem">
               {description?.length > 0 ? description : "No description"}
             </Typography>
             <Box
@@ -106,7 +108,7 @@ const ProductModal = ({ data }) => {
                 }}
               >
                 <CloudIcon />
-                <Typography>Owner - {owner}</Typography>
+                <Typography>Owner: {owner}</Typography>
               </Box>
               <Box
                 sx={{
@@ -117,7 +119,8 @@ const ProductModal = ({ data }) => {
               >
                 <CloudIcon />
                 <Typography>
-                  Main Contacts - Who can I contact to learn more?
+                  Main Contacts:{" "}
+                  {contributors.length > 0 ? contributors[0].email : ""}
                 </Typography>
               </Box>
             </Box>
