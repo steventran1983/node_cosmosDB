@@ -19,7 +19,7 @@ export const theme = createTheme({
     white: {
       main: "#FFFFF",
       light: "#FFFFF",
-      // dark: will be calculated from palette.secondary.main,
+      // dark: will be calculated from palette.secondary.main,thang
       contrastText: "#47008F",
     },
   },
