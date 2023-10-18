@@ -2,7 +2,6 @@ import { Container } from "@mui/system";
 import React from "react";
 import { theme } from "../../data";
 import { ThemeProvider } from "@emotion/react";
-import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import { Divider, Typography } from "@mui/material";
 import featureImage from "../assets/images/techicon/7.png";

@@ -20,6 +20,7 @@ import "aos/dist/aos.css";
 import MeetTeamSkeleton from "../../Skeleton/MeetTeamSkeleton";
 import PatentSkeleton from "../../Skeleton/PatentSkeleton";
 import TestinomialSkeleton from "../../Skeleton/TestinomialSkeleton";
+import Communication from "../../Communication";
 const Home = () => {
   const dispatch = useDispatch();
   const home = useSelector(homeSelector);
@@ -63,7 +64,7 @@ const Home = () => {
         <Box data-aos="fade-up">
           <FeatureTop />
         </Box>
-
+        <Communication />
         {status == "loading" ? (
           <Box data-aos="fade-up">
             <PatentSkeleton />

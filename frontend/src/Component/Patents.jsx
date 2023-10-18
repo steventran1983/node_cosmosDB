@@ -2,14 +2,12 @@ import { Container } from "@mui/system";
 import React from "react";
 import { theme, avaratMap } from "../../data";
 import { ThemeProvider } from "@emotion/react";
-import Grid from "@mui/material/Grid";
 import { Divider, Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import Avatar from "@mui/material/Avatar";
 import AvatarGroup from "@mui/material/AvatarGroup";
 import TipsAndUpdatesIcon from "@mui/icons-material/TipsAndUpdates";
 import Tooltip from "@mui/material/Tooltip";
-import bgImage from "../assets/images/line_1.png";
 
 const Patents = ({ data }) => {
   console.log(data);
