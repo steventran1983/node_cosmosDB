@@ -4,7 +4,7 @@ const client = require("../models/cosmosDB");
 
 const getEmployees = async (req, res) => {
   const databaseId = process.env.COSMOSDB_DATABASE;
-  const containerId = process.env.COSMOSDB_CONTAINER_EMPLOYEES;
+  const containerId = "employees";
   try {
     const { resources: items } = await client
       .database(databaseId)
