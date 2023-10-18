@@ -13,6 +13,7 @@ import CardMedia from "@mui/material/CardMedia";
 import { CardActionArea } from "@mui/material";
 import speaker from "../assets/images/speaker.png";
 import sample from "../assets/images/sample.jpg";
+import cardBg from "../assets/images/cardbg1.png";
 const Communication = () => {
   return (
     <Container maxWidth="xl">
@@ -88,7 +89,7 @@ const Communication = () => {
                   <CardMedia
                     component="img"
                     height="75"
-                    image="/static/images/cards/contemplative-reptile.jpg"
+                    image={cardBg}
                     alt="green iguana"
                   />
                   <CardContent>
@@ -108,7 +109,7 @@ const Communication = () => {
                   <CardMedia
                     component="img"
                     height="75"
-                    image={sample}
+                    image={cardBg}
                     alt="green iguana"
                   />
                   <CardContent>
@@ -138,7 +139,7 @@ const Communication = () => {
                   <CardMedia
                     component="img"
                     height="75"
-                    image="/static/images/cards/contemplative-reptile.jpg"
+                    image={cardBg}
                     alt="green iguana"
                   />
                   <CardContent>
@@ -158,7 +159,7 @@ const Communication = () => {
                   <CardMedia
                     component="img"
                     height="75"
-                    image={sample}
+                    image={cardBg}
                     alt="green iguana"
                   />
                   <CardContent>
