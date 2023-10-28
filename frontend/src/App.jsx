@@ -9,7 +9,7 @@ import Platforms from "./Component/Pages/Platforms/Platforms";
 import Achievements from "./Component/Pages/Achievements/Achievements";
 import Box from "@mui/material/Box";
 import Footer from "./Component/Common/Footer";
-
+import Communications from "./Component/Pages/Communication/Communications";
 import "./App.css";
 
 function App() {
@@ -23,6 +23,10 @@ function App() {
             <Route path="/team" element={<Team />}></Route>
             <Route path="/platforms" element={<Platforms />}></Route>
             <Route path="/products" element={<Products />}></Route>
+            <Route
+              path="/communications/:communicationId"
+              element={<Communications />}
+            ></Route>
             {/* <Route path="/achievements" element={<Achievements />}></Route> */}
             {/* <Route path="/products/edit/:id" element={<EditProduct />}></Route>
           <Route path="/posts" element={<Posts />}></Route>

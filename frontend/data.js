@@ -27,8 +27,8 @@ export const theme = createTheme({
 
 // make a array for team contact with id
 
-export const api = "https://dii-portfolio.azurewebsites.net/api";
-// export const api = "http://localhost:4000/api";
+// export const api = "https://dii-portfolio.azurewebsites.net/api";
+export const api = "http://localhost:4000/api";
 
 export const avaratMap = {
   Vikas: "https://thangtranweek5.blob.core.windows.net/teamphoto/Vikas.png",
@@ -62,3 +62,154 @@ export const avaratMap = {
   Kiran: "https://thangtranweek5.blob.core.windows.net/teamphoto/other_3.png",
   Bhavin: "https://thangtranweek5.blob.core.windows.net/teamphoto/other.png",
 };
+
+export const commuTest = [
+  {
+    id: 1,
+    title: "LSR Insights In Quantum Snowflake",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis",
+    impact: [
+      "lorem ipsum dolor sit amet",
+      "consectetur adipiscing elit",
+      "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    ],
+    detail: [
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    ],
+    table: {
+      head: ["table name", "description"],
+      body: [
+        ["LSR_ENDC", "lorem ipsum dolor sit amet, consectetur adipiscing elit"],
+        ["LSR_ENDC", "lorem ipsum dolor sit amet, consectetur adipiscing elit"],
+        ["LSR_ENDC", "lorem ipsum dolor sit amet, consectetur adipiscing elit"],
+        ["LSR_ENDC", "lorem ipsum dolor sit amet, consectetur adipiscing elit"],
+      ],
+    },
+    nextstep: [
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    ],
+    diagram: "https://www.w3schools.com/w3css/img_lights.jpg",
+    contact: {
+      engineers: ["Thang Tran", "Darren Husting", "Stratos Koutrulis"],
+      managers: "Vikas Ranjas",
+      director: "Peter Huang",
+      team: "Quantum LSR Mission Team",
+    },
+  },
+  {
+    id: 2,
+    title: "LSR Insights In Quantum Snowflake Number 2",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis",
+    impact: [
+      "lorem ipsum dolor sit amet",
+      "consectetur adipiscing elit",
+      "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    ],
+    detail: [
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    ],
+    table: {
+      head: ["table name", "description"],
+      body: [
+        ["LSR_ENDC", "lorem ipsum dolor sit amet, consectetur adipiscing elit"],
+        ["LSR_ENDC", "lorem ipsum dolor sit amet, consectetur adipiscing elit"],
+        ["LSR_ENDC", "lorem ipsum dolor sit amet, consectetur adipiscing elit"],
+        ["LSR_ENDC", "lorem ipsum dolor sit amet, consectetur adipiscing elit"],
+      ],
+    },
+    nextstep: [
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    ],
+    diagram: "https://www.w3schools.com/w3css/img_lights.jpg",
+    contact: {
+      engineers: ["Thang Tran", "Darren Husting", "Stratos Koutrulis"],
+      managers: "Vikas Ranjas",
+      director: "Peter Huang",
+      team: "Quantum LSR Mission Team",
+    },
+  },
+  {
+    id: 3,
+    title: "LSR Insights In Quantum Snowflake",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis",
+    impact: [
+      "lorem ipsum dolor sit amet",
+      "consectetur adipiscing elit",
+      "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    ],
+    detail: [
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    ],
+    table: {
+      head: ["table name", "description"],
+      body: [
+        ["LSR_ENDC", "lorem ipsum dolor sit amet, consectetur adipiscing elit"],
+        ["LSR_ENDC", "lorem ipsum dolor sit amet, consectetur adipiscing elit"],
+        ["LSR_ENDC", "lorem ipsum dolor sit amet, consectetur adipiscing elit"],
+        ["LSR_ENDC", "lorem ipsum dolor sit amet, consectetur adipiscing elit"],
+      ],
+    },
+    nextstep: [
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    ],
+    diagram: "https://www.w3schools.com/w3css/img_lights.jpg",
+    contact: {
+      engineers: ["Thang Tran", "Darren Husting", "Stratos Koutrulis"],
+      managers: "Vikas Ranjas",
+      director: "Peter Huang",
+      team: "Quantum LSR Mission Team",
+    },
+  },
+  {
+    id: 4,
+    title: "LSR Insights In Quantum Snowflake",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis",
+    impact: [
+      "lorem ipsum dolor sit amet",
+      "consectetur adipiscing elit",
+      "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    ],
+    detail: [
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    ],
+    table: {
+      head: ["table name", "description"],
+      body: [
+        ["LSR_ENDC", "lorem ipsum dolor sit amet, consectetur adipiscing elit"],
+        ["LSR_ENDC", "lorem ipsum dolor sit amet, consectetur adipiscing elit"],
+        ["LSR_ENDC", "lorem ipsum dolor sit amet, consectetur adipiscing elit"],
+        ["LSR_ENDC", "lorem ipsum dolor sit amet, consectetur adipiscing elit"],
+      ],
+    },
+    nextstep: [
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    ],
+    diagram: "https://www.w3schools.com/w3css/img_lights.jpg",
+    contact: {
+      engineers: ["Thang Tran", "Darren Husting", "Stratos Koutrulis"],
+      managers: "Vikas Ranjas",
+      director: "Peter Huang",
+      team: "Quantum LSR Mission Team",
+    },
+  },
+];

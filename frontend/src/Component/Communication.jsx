@@ -1,11 +1,11 @@
 import { Container } from "@mui/system";
 import React from "react";
-import { theme, avaratMap } from "../../data";
+import { theme, avaratMap, commuTest } from "../../data";
 import { ThemeProvider } from "@emotion/react";
 import { Divider, Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
-
+import { Link } from "react-router-dom";
 import TipsAndUpdatesIcon from "@mui/icons-material/TipsAndUpdates";
 import Tooltip from "@mui/material/Tooltip";
 import CardContent from "@mui/material/CardContent";
@@ -14,9 +14,15 @@ import { CardActionArea } from "@mui/material";
 import speaker from "../assets/images/speaker.png";
 import sample from "../assets/images/sample.jpg";
 import cardBg from "../assets/images/cardbg1.png";
+import CommunicationItem from "./CommunicationItem";
 const Communication = () => {
   return (
-    <Container maxWidth="xl">
+    <Container
+      maxWidth="xl"
+      sx={{
+        marginTop: "4rem",
+      }}
+    >
       <ThemeProvider theme={theme}>
         <Typography
           variant="h3"
@@ -34,7 +40,6 @@ const Communication = () => {
             justifyContent: "center",
             alignItems: "center",
             flexWrap: "wrap",
-            rowGap: "2rem",
             columnGap: "2rem",
           }}
         >
@@ -44,8 +49,9 @@ const Communication = () => {
               justifyContent: "center",
               alignItems: "center",
               flexDirection: "column",
-              rowGap: "2rem",
+              rowGap: "1rem",
               width: "40%",
+              flex: 1,
             }}
           >
             <img
@@ -67,114 +73,17 @@ const Communication = () => {
           <Box
             sx={{
               display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
+              justifyContent: "flex-end",
               alignItems: "center",
               flexWrap: "wrap",
               rowGap: "2rem",
               columnGap: "2rem",
+              flex: 2,
             }}
           >
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                columnGap: "2rem",
-                // flexWrap: "wrap",
-              }}
-            >
-              <Card sx={{ maxWidth: 300 }}>
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    height="75"
-                    image={cardBg}
-                    alt="green iguana"
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      Lizard
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      Lizards are a widespread group of squamate reptiles, with
-                      over 6,000 species, ranging across all continents except
-                      Antarctica
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-              <Card sx={{ maxWidth: 300 }}>
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    height="75"
-                    image={cardBg}
-                    alt="green iguana"
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      Lizard
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      Lizards are a widespread group of squamate reptiles, with
-                      over 6,000 species, ranging across all continents except
-                      Antarctica
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-            </Box>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                columnGap: "2rem",
-                // flexWrap: "wrap",
-              }}
-            >
-              <Card sx={{ maxWidth: 300 }}>
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    height="75"
-                    image={cardBg}
-                    alt="green iguana"
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      Lizard
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      Lizards are a widespread group of squamate reptiles, with
-                      over 6,000 species, ranging across all continents except
-                      Antarctica
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-              <Card sx={{ maxWidth: 300 }}>
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    height="75"
-                    image={cardBg}
-                    alt="green iguana"
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      Lizard
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      Lizards are a widespread group of squamate reptiles, with
-                      over 6,000 species, ranging across all continents except
-                      Antarctica
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-            </Box>
+            {commuTest.map((item, index) => (
+              <CommunicationItem key={index} item={item} />
+            ))}
           </Box>
         </Box>
       </ThemeProvider>
