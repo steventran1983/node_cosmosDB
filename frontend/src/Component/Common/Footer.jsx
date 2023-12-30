@@ -70,7 +70,7 @@ const Footer = () => {
         </Typography>
       </Box>
 
-      <Box
+      {/* <Box
         sx={{
           marginTop: "1rem",
           display: "flex",
@@ -103,7 +103,7 @@ const Footer = () => {
             fontSize: "2rem",
           }}
         />
-      </Box>
+      </Box> */}
       <Box
         component="footer"
         sx={{
